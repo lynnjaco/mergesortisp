@@ -44,8 +44,8 @@ Faster than insertion, bubble, and selection sort... but **Merge Sort** has a hi
 Performs well on large datasets... but requires additional memory to temporarily store the merged sub-arrays created during the sorting process. 
 
 #### Research Sources
-*DevSage* - **Best Javascript Recursion Explanation on YouTube** - https://www.youtube.com/watch?v=LteNqj4DFD8 
-*BroCode* - "**Learn Merge Sort in 13 Minutes**" - https://www.youtube.com/watch?v=3j0SWDX4AtU
-*GeeksForGeeks* - **"Calculating Time Complexity | Data Structures and Algorithms"** - https://www.youtube.com/watch?v=KXAbAa1mieU
-https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/
-https://www.geeksforgeeks.org/merge-sort/
+1) *DevSage* - **Best Javascript Recursion Explanation on YouTube** - https://www.youtube.com/watch?v=LteNqj4DFD8
+2) *BroCode* - "**Learn Merge Sort in 13 Minutes**" - https://www.youtube.com/watch?v=3j0SWDX4AtU
+3) *GeeksForGeeks* - **"Calculating Time Complexity | Data Structures and Algorithms"** - https://www.youtube.com/watch?v=KXAbAa1mieU
+4) https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/
+5) https://www.geeksforgeeks.org/merge-sort/
