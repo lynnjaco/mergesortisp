@@ -1,32 +1,51 @@
-## The Merge Sort Algorithm
+## The **Merge Sort** Algorithm
 
-### What you should know...
-Recursion
+### Helpful Pre-Knowledge...
+**Recursion**
 
-The mergeSort algorithm sorts arrays using recursion.  Recursion is a process in which a function is resolved by the reptition of an inner function, until that innerfunction resolves by meeting a specific condition.
+The **Merge Sort** algorithm sorts arrays using recursion.  Recursion is a process in which a function is resolved by the reptition of an inner function, until that innerfunction resolves by meeting a specific condition.
 
-### What is the merge sort algorithm?
-mergeSort is a sorting algorithim that sorts an array by diving that orgiinal array into smaller subrrays, by sorting those smaller subarrays, then merging the sorted subarrays back into a single, final sorted array.   
+**Time Complexity**
+Calculating and understanding the time complexity of your function is beneficial...
 
-### What does the merge sort algorithm look like?
-Visually, the mergeSort algorithim exemplifies a divide and conquer method.  
+**Merge Sort** has time complexity advantages, which will be explained below.
+
+### What is the **Merge Sort** algorithm?
+**Merge Sort** is a sorting algorithim that sorts an array by diving that orgiinal array into smaller subrrays, by sorting those smaller subarrays, then merging the sorted subarrays back into a single, final sorted array.   
+
+### What does the **Merge Sort** algorithm look like?
+Visually, the **Merge Sort** algorithim exemplifies a divide and conquer method.  
 
 If wwe start with an array of eight elements, the first divide will result in a subarray level with two arrays of four elements.  The next level of divison will result in four subarrys of two elements.  The final divsion will result in eight separate arrays, each contnaing a single value.
 
-Keep in mind... these divisions are not ocurring simultaneously.  The mergeSort "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand.  
+Keep in mind... these divisions are not ocurring simultaneously.  The **Merge Sort** "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand.  
 
-### How do you use mergeSort?
+### How do you use **Merge Sort**?
 Step - by - step code walkthrough
 
-### Why would you use merge sort?
-	time/space complexity & Big O Evaluation
-		O(n)
-	types of data
+### Why would you use **Merge Sort**?
+**Merge sort** has a worst-case time complexity of O(N logN).
 
-### When is it best to use merge sort?
-	real world application
+### When is it best to use **Merge Sort**?
+Need to sort a large dataset
+
 
 ### Key Takeaways
-	-faster than insertion, bubble, and selection sort
-	-uses more space
-	- edge cases and constraints
+
+**Merge Sort** is:
+
+**Stable!**
+stable sorting algorithm, which means it maintains the relative order of equal elements in the input array.
+
+**Speedy!**
+Faster than insertion, bubble, and selection sort... but **Merge Sort** has a higher time complexity which can result in slower performance for very small datasets, which can be more efficently sorted with other methods.
+
+**Super-Size Friendly & Space Hogging!**
+Performs well on large datasets... but requires additional memory to temporarily store the merged sub-arrays created during the sorting process. 
+
+#### Research Sources
+*DevSage* - **Best Javascript Recursion Explanation on YouTube** - https://www.youtube.com/watch?v=LteNqj4DFD8 
+*BroCode* - "**Learn Merge Sort in 13 Minutes**" - https://www.youtube.com/watch?v=3j0SWDX4AtU
+*GeeksForGeeks* - **"Calculating Time Complexity | Data Structures and Algorithms"** - https://www.youtube.com/watch?v=KXAbAa1mieU
+https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/
+https://www.geeksforgeeks.org/merge-sort/
