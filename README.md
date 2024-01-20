@@ -18,13 +18,14 @@ Visually, the **Merge Sort** algorithim exemplifies a divide and conquer method.
 
 If wwe start with an array of eight elements, the first divide will result in a subarray level with two arrays of four elements.  The next level of divison will result in four subarrys of two elements.  The final divsion will result in eight separate arrays, each contnaing a single value.
 
+Please, note... these divisions are *not* ocurring simultaneously.  The **Merge Sort** "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand. See the animation below for a visual demonstration.
+
 ![Alt text](DnCArray.gif)
 
 Note: If an array has an odd number of elements (meaning it won't divide evenly), the left subarray will contain the larger amount of elements, as shown in the animation below.
 
 ![Uneven-Array-Division](OddArray.gif)
-
-Keep in mind... these divisions are not ocurring simultaneously.  The **Merge Sort** "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand.  
+ 
 
 ### How do you use **Merge Sort**?
 Step - by - step code walkthrough
