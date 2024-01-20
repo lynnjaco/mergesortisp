@@ -3,7 +3,7 @@
 # Helpful Pre-Knowledge...
 **Recursion**
 
-The **Merge Sort** algorithm sorts arrays using recursion.  Recursion is a process in which a function is resolved by the reptition of an inner function, until that innerfunction resolves by meeting a specific condition.
+The **Merge Sort** algorithm sorts arrays using *recursion*.  Recursion is a process in which a function is resolved when a specific condition is met by the reptition of an inner function.
 
 **Time Complexity**
 Calculating and understanding the time complexity of your function is beneficial...
@@ -16,15 +16,23 @@ Calculating and understanding the time complexity of your function is beneficial
 # What does the **Merge Sort** algorithm look like?
 Visually, the **Merge Sort** algorithim exemplifies a divide and conquer method.  
 
-If wwe start with an array of eight elements, the first divide will result in a subarray level with two arrays of four elements.  The next level of divison will result in four subarrys of two elements.  The final divsion will result in eight separate arrays, each contnaing a single value.
+![Divide-And-Conquer-Array](DnCArray.gif)
 
-![Alt text](DnCArray.gif)
+If wwe start with an array of eight elements, the first divide will result in a subarray level with two arrays of four elements.  The next level of divison will result in four subarrys of two elements.  The divsion stops after all subarrays have been divded down to single element arrays. 
 
-Notice how these divisions are *not* ocurring simultaneously?  This is important to recall when you see the recursive nature of the code. The **Merge Sort** algorithm "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand.
+(insert of)
+
+Did you notice how the divisions do *not* ocurr simultaneously?  This is important to recall when you see the recursive nature of the code. The **Merge Sort** algorithm "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand.
 
 Note: If an array has an odd number of elements (meaning it won't divide evenly), the left subarray will contain the larger amount of elements, as shown in the animation below.
 
 ![Uneven-Array-Division](OddArray.gif)
+
+After the merging of subarrays has resolved to two separately sorted arrays, the final merge sort can take place.  Starting with the leftmost elements of each array (index 0), the two elements are compared as we've previously seen demonstrated.  The lowest value is assigned to the first position of the final array. 
+
+Note... The comparison will always occur between the leftmost values of each subarrays.  This means if the index 0 of the left and right arrays are compared resulting in the left array's index 0 as the lower value, it will be placed into the index 0 of the main array.  And the next round of comparisons will be between index 1 of the left array, and index 0 of the right array.  This comaprison continues until both subarrays are emppty, resulting in a completely sorted array. 
+
+![Alt text](Final-Sorting.gif)
  
 # How do you use **Merge Sort**?
 *Insert Code Block*
@@ -34,7 +42,6 @@ Note: If an array has an odd number of elements (meaning it won't divide evenly)
 
 # When is it best to use **Merge Sort**?
 Need to sort a large dataset
-
 
 # Key Takeaways
 
