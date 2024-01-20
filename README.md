@@ -91,6 +91,7 @@ return mergeTwoSubArrays(createSubArrays(leftArray), createSubArrays(rightArray)
 # When is it best to use **Merge Sort**?
 1) Merge sort is best used when you have to sort a large set of data.
 2) Linked lists, which are chain-like data structures where each element (called a node) holds the value itself, and the node that follows it.
+3) When you want to sort a large dataset, and maintain the order of elements that have the same values.
 
 
 # Why would you use **Merge Sort**?
@@ -121,7 +122,7 @@ A stable sorting algorithm, which means it maintains the relative order of equal
 Faster than insertion, bubble, and selection sort... However, **Merge Sort** has a higher time complexity which can result in slower performance when used for small datasets which could be more efficently sorted with other methods.
 
 ## **Super-Size Friendly & Space Hogging!**
-Performs well on large datasets... but requires additional memory to temporarily store the merged sub-arrays created during the sorting process. 
+Performs well on large datasets... but requires additional memory to temporarily store the merged sub-arrays created during the sorting process.  This is also disadvantageous if the array is already partially sorted.  Merge sort will divide and conquer everything within the array.
 
 ##### Research & Sources
 1) *DevSage* - **Best Javascript Recursion Explanation on YouTube** - https://www.youtube.com/watch?v=LteNqj4DFD8
@@ -132,4 +133,4 @@ Performs well on large datasets... but requires additional memory to temporarily
 6) https://www.geeksforgeeks.org/merge-sort/
 7) https://www.studytonight.com/data-structures/merge-sort
 8) Log-Linear Image - https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg ***
-9) https://developer.nvidia.com/blog/merge-sort-explained-a-data-scientists-algorithm-guide/#:~:text=Use%20merge%20sort%20when%20there,position%20in%20the%20sorted%20output.
+9) https://developer.nvidia.com/blog/merge-sort-explained-a-data-scientists-algorithm-guide/
