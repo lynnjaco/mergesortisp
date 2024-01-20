@@ -1,4 +1,4 @@
-function createSubArrays(array) {
+function mergeSort(array) {
 
     // create a base case for if an array length is 1, meaning it is technically already sorted
     if (array.length === 1) {
@@ -10,8 +10,8 @@ function createSubArrays(array) {
     const leftArray = array.slice(0, middleIndexValue); // starting from the first index of the input array, up to but not including the index of the middle index value, create the left array
     const rightArray = array.slice(middleIndexValue); // starting from the index of the middle index value, including the remainder of the input array, create the right array
 
-    // call the mergeTwoSubArrays function with the left and right arrays created from the createSubArrays function, as parameters.  The result will be two separate arrays, which we will need to use as parameters in a helper function that will create one final, sorted array.
-    return mergeTwoSubArrays(createSubArrays(leftArray), createSubArrays(rightArray));
+    // call the mergeTwoSubArrays function with the left and right arrays created from the mergeSort function, as parameters.  The result will be two separate arrays, which we will need to use as parameters in a helper function that will create one final, sorted array.
+    return mergeTwoSubArrays(mergeSort(leftArray), mergeSort(rightArray));
 }
 
 //create helper function to merge two sorted arrays with two parameters of the left and right arrays
@@ -37,4 +37,4 @@ function mergeTwoSubArrays(leftArray, rightArray) {
     return mergedValues.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
 }
 
-console.log(createSubArrays( [1, 9, 17, 5, 26, 8, 13, 4, 10, 15] ));
+console.log(mergeSort( [1, 9, 17, 5, 26, 8, 13, 4, 10, 15] ));

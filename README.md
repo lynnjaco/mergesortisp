@@ -84,7 +84,7 @@ The function continues to run for the remaining subarrays.
 
 5. The function is resolved when the last subarrays have been sorted into the main array.
 ```
-return mergeTwoSubArrays(createSubArrays(leftArray), createSubArrays(rightArray));
+return mergeTwoSubArrays(mergeSort(leftArray), mergeSort(rightArray));
 ```
 ![Alt text](Final-Sorting-1.gif)
 
