@@ -1,6 +1,6 @@
-## The **Merge Sort** Algorithm
+### The **Merge Sort** Algorithm
 
-### Helpful Pre-Knowledge...
+# Helpful Pre-Knowledge...
 **Recursion**
 
 The **Merge Sort** algorithm sorts arrays using recursion.  Recursion is a process in which a function is resolved by the reptition of an inner function, until that innerfunction resolves by meeting a specific condition.
@@ -10,34 +10,33 @@ Calculating and understanding the time complexity of your function is beneficial
 
 **Merge Sort** has time complexity advantages, which will be explained below.
 
-### What is the **Merge Sort** algorithm?
+# What is the **Merge Sort** algorithm?
 **Merge Sort** is a sorting algorithim that sorts an array by diving that orgiinal array into smaller subrrays, by sorting those smaller subarrays, then merging the sorted subarrays back into a single, final sorted array.   
 
-### What does the **Merge Sort** algorithm look like?
+# What does the **Merge Sort** algorithm look like?
 Visually, the **Merge Sort** algorithim exemplifies a divide and conquer method.  
 
 If wwe start with an array of eight elements, the first divide will result in a subarray level with two arrays of four elements.  The next level of divison will result in four subarrys of two elements.  The final divsion will result in eight separate arrays, each contnaing a single value.
 
 ![Alt text](DnCArray.gif)
 
-Notice how these divisions are *not* ocurring simultaneously?  This is important to recall when you see the recursive function of the code. The **Merge Sort** algorithm "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand.
+Notice how these divisions are *not* ocurring simultaneously?  This is important to recall when you see the recursive nature of the code. The **Merge Sort** algorithm "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand.
 
 Note: If an array has an odd number of elements (meaning it won't divide evenly), the left subarray will contain the larger amount of elements, as shown in the animation below.
 
 ![Uneven-Array-Division](OddArray.gif)
  
+# How do you use **Merge Sort**?
+*Insert Code Block*
 
-### How do you use **Merge Sort**?
-Step - by - step code walkthrough
+# Why would you use **Merge Sort**?
+**Merge sort** has a worst-case time complexity of O(NlogN).
 
-### Why would you use **Merge Sort**?
-**Merge sort** has a worst-case time complexity of O(N logN).
-
-### When is it best to use **Merge Sort**?
+# When is it best to use **Merge Sort**?
 Need to sort a large dataset
 
 
-### Key Takeaways
+# Key Takeaways
 
 **Merge Sort** is:
 
@@ -51,7 +50,7 @@ Faster than insertion, bubble, and selection sort... but **Merge Sort** has a hi
 Performs well on large datasets... but requires additional memory to temporarily store the merged sub-arrays created during the sorting process. 
 
 
-#### Research Sources
+##### Research & Sources
 1) *DevSage* - **Best Javascript Recursion Explanation on YouTube** - https://www.youtube.com/watch?v=LteNqj4DFD8
 2) *BroCode* - "**Learn Merge Sort in 13 Minutes**" - https://www.youtube.com/watch?v=3j0SWDX4AtU
 3) *GeeksForGeeks* - **"Calculating Time Complexity | Data Structures and Algorithms"** - https://www.youtube.com/watch?v=KXAbAa1mieU
