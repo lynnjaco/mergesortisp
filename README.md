@@ -110,7 +110,7 @@ Therefore...
 *Linear* O(n) * *Logarithmic* O(log n) = **O((n)log(n))**
 
 ![https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg](image.png) 
-* Log-Linear Image - https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg *
+* https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg *
 
 
 # Key Takeaways
