@@ -1,17 +1,18 @@
 ### The **Merge Sort** Algorithm
 
+
 # Helpful Pre-Knowledge...
 **Recursion**
 
 The **Merge Sort** algorithm sorts arrays using *recursion*.  Recursion is a process in which a function is resolved when a specific condition is met by the reptition of an inner function.
 
 **Time Complexity**
-Calculating and understanding the time complexity of your function is beneficial...
+Calculating and understanding the time complexity of an algorthim is beneficial, because **Merge Sort** has time complexity advantages and constraints, which will be explained below.
 
-**Merge Sort** has time complexity advantages, which will be explained below.
 
 # What is the **Merge Sort** algorithm?
-**Merge Sort** is a sorting algorithim that sorts an array by diving that orgiinal array into smaller subrrays, by sorting those smaller subarrays, then merging the sorted subarrays back into a single, final sorted array.   
+**Merge Sort** is a sorting algorithim that sorts an array recursively, by dividing an array into evenly/semi-evenly split subrrays, by sorting those smaller subarrays, then merging the sorted subarrays back into a single, final sorted array.   
+
 
 # What does the **Merge Sort** algorithm look like?
 Visually, the **Merge Sort** algorithim exemplifies a divide and conquer method.  
@@ -32,32 +33,79 @@ Note... The comparison will always occur between the leftmost values of each sub
 
 ![Alt text](Final-Sorting.gif)
  
+
 # How do you use **Merge Sort**?
-*Insert Code Block*
 
-Insert 
+1. Create a base condition, where an array returns, once it has reached a length of 1.
+```if (array.length === 1) {
+	return array;
+}
+```
 
-The loop repeats to resolve the sorting of the level () subarrays.
+
+2. Divide the input array into two subarrays.
+```
+const middleIndexValue = Math.ceil(array.length/2);
+const leftArray = array.slice(0, middleIndexValue);
+const rightArray = array.slice(middleIndexValue);
+```
+
+3. A while loop compares the values of the left index and the right index.  Taking the lesser of the two, and placing it into 
 ![LeftSort-Continued](leftmostp2.gif)
+```
+while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
+	if (leftArray[leftIndex] < rightArray[rightIndex]) {
+		mergedValues.push(leftArray[leftIndex]);
+		leftIndex++;
+	} else {
+		mergedValues.push(rightArray[rightIndex]);
+		rightIndex++;
+	}
+}
+```
 
-The Merge Sort is considered complete when the highest level subarray has been sorted.
+
+4. Eventually one of the arrays will be completely empty, as seen in the image below.
+![Alt text](<Screenshot 2024-01-18 at 11.18.38 PM.png>)  
+
+
+Since our helper fucntion only runs when both arrays have lengths greater than 0, this return uses the concat method to merge the remaining subarray of sorted values, with the higher array.
+```
+return mergedValues.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
+```
+![Alt text](mergeremainderarray.gif)
+
+
+The function continues to run for the remaining subarrays.
 ![Finish-The-Left](leftmostp3.gif)
+
+
+5. The function is resolved when the last subarrays have been sorted into the main array.
+```
+return mergeTwoSubArrays(createSubArrays(leftArray), createSubArrays(rightArray));
+```
+![Alt text](Final-Sorting-1.gif)
 
 
 # When is it best to use **Merge Sort**?
 1) Merge sort is best used when you have to sort a large set of data.
 2) Linked lists, which are chain-like data structures where each element (called a node) holds the value itself, and the node that follows it.
 
+
 # Why would you use **Merge Sort**?
-**Merge sort** has a worst-case time complexity of O(n log(n)) and a space complexity O(n).
+**Merge sort** has a **log-linear** time compelxity O(n log(n)).  
 
 If you reference the time complexity graph, you will see that for small data sets, As demonstrated by the time complexity graph, as the data size increases, the number of operations stays relatively the same
 
-Every divison of an array is a logarithmic function, O(log(n)).
+Every divison of an array is a logarithmic function, O(log(n)), as shown below.
+![Alt text](alldivisions.jpg)
 
-The merging of arrays is linear, O(n), because there is one operation needed for every array.
+The merging of arrays is linear, O(n), because there is one operation needed for every array that has been created, as shown below.
+![Alt text](<alldivisions merge.jpg>)
 
-So O(n) * O(log n) = O((n)log(n))
+Therefore...
+*Linear* O(n) * *Logarithmic* O(log n) = **O((n)log(n))**
+
 
 # Key Takeaways
 

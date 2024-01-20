@@ -1,4 +1,5 @@
 function createSubArrays(array) {
+
     // create a base case for if an array length is 1, meaning it is technically already sorted
     if (array.length === 1) {
         return array;
@@ -9,11 +10,13 @@ function createSubArrays(array) {
     const leftArray = array.slice(0, middleIndexValue); // starting from the first index of the input array, up to but not including the index of the middle index value, create the left array
     const rightArray = array.slice(middleIndexValue); // starting from the index of the middle index value, including the remainder of the input array, create the right array
 
-    // call the mergeSort function on both the newly created left and right arrays.  the result will be two separate arrays, which we will need to input into a helper function that will create one final, sorted array.
+    // call the mergeTwoSubArrays function with the left and right arrays created from the createSubArrays function, as parameters.  The result will be two separate arrays, which we will need to use as parameters in a helper function that will create one final, sorted array.
     return mergeTwoSubArrays(createSubArrays(leftArray), createSubArrays(rightArray));
 }
 
+//create helper function to merge two sorted arrays with two parameters of the left and right arrays
 function mergeTwoSubArrays(leftArray, rightArray) {
+
     //intitalize an array for sorted subarrays to place their values (merge)
     let mergedValues = [];
     let leftIndex = 0;
@@ -30,9 +33,8 @@ function mergeTwoSubArrays(leftArray, rightArray) {
         }
     }
 
-    // eventually there will be an array that does not have anything, so the while looop cannot continue to compare left and right arrays.  This return creates a final merge of the mergedValues array that resulted from comparisons, with the remainder of the subarrays.  One of the arrays will evalute to an empty array.
+    //create a final merge of the sorted arrays from mergedValues
     return mergedValues.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
-
 }
 
-console.log(createSubArrays([1, 9, 7, 5, 6, 8, 3, 4, 10, 50, 0]));
+console.log(createSubArrays( [1, 9, 17, 5, 26, 8, 13, 4, 10, 15] ));
