@@ -105,6 +105,7 @@ The merging of arrays is linear, O(n), because there is one operation needed for
 
 Therefore...
 *Linear* O(n) * *Logarithmic* O(log n) = **O((n)log(n))**
+![https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg](image.png)
 
 
 # Key Takeaways
@@ -128,3 +129,4 @@ Performs well on large datasets... but requires additional memory to temporarily
 5) https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/
 6) https://www.geeksforgeeks.org/merge-sort/
 7) https://www.studytonight.com/data-structures/merge-sort
+8) Log-Linear Image - https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg
