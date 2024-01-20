@@ -11,7 +11,7 @@ Calculating and understanding the time complexity of an algorthim is beneficial,
 
 
 # What is the **Merge Sort** algorithm?
-**Merge Sort** is a sorting algorithim that sorts an array recursively, by dividing an array into evenly/semi-evenly split subrrays, by sorting those smaller subarrays, then merging the sorted subarrays back into a single, final sorted array.   
+**Merge Sort** is a sorting algorithim that sorts an array recursively, by dividing an array into evenly/semi-evenly split subrrays, sorting those smaller subarrays, then merging the sorted subarrays back into a single, final array.   
 
 
 # What does the **Merge Sort** algorithm look like?
@@ -19,9 +19,10 @@ Visually, the **Merge Sort** algorithim exemplifies a divide and conquer method.
 
 ![Divide-And-Conquer-Array](DnCArray.gif)
 
-If wwe start with an array of eight elements, the first divide will result in a subarray level with two arrays of four elements.  The next level of divison will result in four subarrys of two elements.  The divsion stops after all subarrays have been divded down to single element arrays. 
+If we start with an array of eight elements, the first divide will result in a subarray level with two arrays of four elements.  The next level of divison will result in four subarrys of two elements.  The divsion stops after all subarrays have been divded down to single element arrays. 
+![Divisions](<alldivisions copy.jpg>)
 
-Did you notice how the divisions do *not* ocurr simultaneously?  This is important to recall when you see the recursive nature of the code. The **Merge Sort** algorithm "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand.
+Don't let the image above confuse you! The divisions do *not* ocurr simultaneously?  This is important to recall when you see the recursive nature of the code. The **Merge Sort** algorithm "divides and conquers" the leftmost array, to completion, before proceeding to handling the next subarray.  A subarray is not considered "conquered" (or resolved) until the values of the subarrays beneath it have been sorted in ascending order, and emptied into the array at hand.
 
 Note: If an array has an odd number of elements (meaning it won't divide evenly), one of the subarryas will have 1 more element than the other.  This will be reflected in the code below.
 
@@ -36,21 +37,21 @@ Note... The comparison will always occur between the leftmost values of each sub
 
 # How do you use **Merge Sort**?
 
-1. Create a base condition, where an array returns, once it has reached a length of 1.
+1. Create a base condition, in which an array returns once it has reached a length of 1.
 ```if (array.length === 1) {
 	return array;
 }
 ```
 
 
-2. Divide the input array into two subarrays.
+2. Divide the array into two subarrays.
 ```
 const middleIndexValue = Math.ceil(array.length/2);
 const leftArray = array.slice(0, middleIndexValue);
 const rightArray = array.slice(middleIndexValue);
 ```
 
-3. A while loop compares the values of the left index and the right index.  Taking the lesser of the two, and placing it into 
+3. A while loop compares the values of the left index and the right index.  Taking the lesser of the two, and placing it into the array from which it was split. 
 ![LeftSort-Continued](leftmostp2.gif)
 ```
 while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
@@ -65,7 +66,7 @@ while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
 ```
 
 
-4. Eventually one of the arrays will be completely empty, as seen in the image below.
+4. Eventually one of the arrays will be empty, as seen in the image below.
 ![Alt text](<Screenshot 2024-01-18 at 11.18.38 PM.png>)  
 
 
@@ -105,7 +106,8 @@ The merging of arrays is linear, O(n), because there is one operation needed for
 
 Therefore...
 *Linear* O(n) * *Logarithmic* O(log n) = **O((n)log(n))**
-![https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg](image.png)
+
+![https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg](image.png) Source ***
 
 
 # Key Takeaways
@@ -113,7 +115,7 @@ Therefore...
 **Merge Sort** is:
 
 ## **Stable!**
-A stable sorting algorithm, which means it maintains the relative order of equal elements in the input array.
+A stable sorting algorithm, which means it maintains the relative order of equal elements in the input array. "Stable sorting involves maintaining the order of identical values within an array. When compared with the unsorted data input, the order of identical values throughout an array in a stable sort is kept in the same position in the sorted output." Source **
 
 ## **Speedy!**
 Faster than insertion, bubble, and selection sort... However, **Merge Sort** has a higher time complexity which can result in slower performance when used for small datasets which could be more efficently sorted with other methods.
@@ -129,4 +131,5 @@ Performs well on large datasets... but requires additional memory to temporarily
 5) https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/
 6) https://www.geeksforgeeks.org/merge-sort/
 7) https://www.studytonight.com/data-structures/merge-sort
-8) Log-Linear Image - https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg
+8) Log-Linear Image - https://www.doabledanny.com/static/31985456f982a6965ee675e767256140/f2bf3/6.jpg ***
+9) https://developer.nvidia.com/blog/merge-sort-explained-a-data-scientists-algorithm-guide/#:~:text=Use%20merge%20sort%20when%20there,position%20in%20the%20sorted%20output.
