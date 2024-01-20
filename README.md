@@ -104,7 +104,7 @@ Every divison of an array is a logarithmic function, O(log(n)), as shown below.
 ![Alt text](alldivisions.jpg)
 
 The merging of arrays is linear, O(n), because there is one operation needed for every array that has been created, as shown below.
-![Alt text](<alldivisions merge.jpg>)
+![linearops](image-1.png)
 
 Therefore...
 *Linear* O(n) * *Logarithmic* O(log n) = **O((n)log(n))**
