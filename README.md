@@ -18,6 +18,8 @@ Visually, the **Merge Sort** algorithim exemplifies a divide and conquer method.
 
 If wwe start with an array of eight elements, the first divide will result in a subarray level with two arrays of four elements.  The next level of divison will result in four subarrys of two elements.  The final divsion will result in eight separate arrays, each contnaing a single value.
 
+![Alt text](DnCArray.gif)
+
 Note: If an array has an odd number of elements (meaning it won't divide evenly), the left subarray will contain the larger amount of elements, as shown in the animation below.
 
 ![Uneven-Array-Division](OddArray.gif)
