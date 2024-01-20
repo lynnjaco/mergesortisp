@@ -38,7 +38,8 @@ Note... The comparison will always occur between the leftmost values of each sub
 # How do you use **Merge Sort**?
 
 1. Create a base condition, in which an array returns once it has reached a length of 1.
-```if (array.length === 1) {
+```
+if (array.length === 1) {
 	return array;
 }
 ```
